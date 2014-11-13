@@ -503,7 +503,7 @@ function M = run_fMRI_ts(X, opts, varargin)
 %               l.reps = 50;
 %               M = run_fMRI_ts(X, opts, l);
 %
-%
+% modified by Davy Vanderweyen
 
 if nargin<3, error('myApp:argChk', 'All 3 arguments are required.'); end
 
@@ -513,6 +513,7 @@ if iscell(X)
     for i=1:length(varargin)
         
         for k=1:length(X)
+            sprintf('Subject number %d',k)
             aux{k}=run_fMRI_ts_data_cell(X{k}, opts, varargin{i});
         end
         M{i} = aux;

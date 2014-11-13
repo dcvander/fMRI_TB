@@ -22,7 +22,6 @@ elseif ~isnumeric(type.reps) || type.reps<1, error('myApp:argChk', 'Number of ti
 end
 if isfield(type,'reps') && isnumeric(type.reps), reps=type.reps; end
 
-disp('Starting modularity runs')
 C1 = modularity_louvain_und_sign(ConnMatrix);
 Ci=C1';
 for i=1:reps-1
