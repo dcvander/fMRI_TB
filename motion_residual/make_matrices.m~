@@ -1,0 +1,12 @@
+function [signalMatrix,motionMatrix]=make_matrices(subject)
+
+% this function creates the subj structure for analysis by the
+% linRegSignalAndheadRotation.m function
+
+
+impo=importdata(subject);              % import file
+signalMatrix=impo.data(:,1:264);       % 
+motionMatrix=impo.data(:,265:270);
+
+
+end
